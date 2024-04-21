@@ -1,0 +1,25 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
+  "browserslist": {
+    "development": [
+      "last 1 version"
+    ],
+    "production": [
+      "defaults"
+    ]
+  },
+  "dependencies": {
+    "@redwoodjs/forms": "8.0.0-canary.496",
+    "@redwoodjs/router": "8.0.0-canary.496",
+    "@redwoodjs/web": "8.0.0-canary.496",
+    "react": "19.0.0-canary-36e62c603-20240418",
+    "react-dom": "19.0.0-canary-36e62c603-20240418"
+  },
+  "devDependencies": {
+    "@redwoodjs/vite": "8.0.0-canary.496",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19"
+  }
+}
