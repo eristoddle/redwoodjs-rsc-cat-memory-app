@@ -1,17 +1,16 @@
-import { Counter } from 'src/components/Counter'
-// @ts-expect-error no types
-import styles from './HomePage.module.css'
+import CatsCell from './CatsCell'
 
 import './HomePage.css'
 
-const HomePage = ({ name = 'Anonymous' }) => {
+const HomePage = () => {
   return (
-    <div className="home-page">
-      <div style={{ border: '3px red dashed', margin: '1em', padding: '1em' }}>
-        <h1 className={styles.title}>Hello {name}!!</h1>
-        <h3>This is a server component.</h3>
-        <Counter />
-      </div>
+    <div
+      style={{
+        width: '100vw',
+        height: '100vh',
+      }}
+    >
+      <CatsCell />
     </div>
   )
 }
