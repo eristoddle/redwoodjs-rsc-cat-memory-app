@@ -1,5 +1,4 @@
-const Card = ({ cat }) => {
-  const { _id } = cat
+const Card = ({ image }) => {
   return (
     <div
       style={{
@@ -13,7 +12,7 @@ const Card = ({ cat }) => {
       }}
     >
       <img
-        src={`https://cataas.com/cat?_id=${_id}`}
+        src={image}
         alt="cat"
         style={{ objectFit: 'cover', width: '200px', height: '200px' }}
       />
