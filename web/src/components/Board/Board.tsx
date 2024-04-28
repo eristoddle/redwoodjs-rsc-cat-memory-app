@@ -12,12 +12,12 @@ const Board = ({ cats }) => {
 
   useEffect(() => {
     if (chosenCards.length === 2) {
-      setTimeout(checkCards, 500)
+      setTimeout(checkCards, 1000)
     }
   }, [chosenCards])
 
   useEffect(() => {
-    if (foundCards.length === cats.length) {
+    if (foundCards.length === cats.length / 2) {
       alert(`You won in ${tries} tries`)
     }
   }, [foundCards, cats, tries])
@@ -32,11 +32,12 @@ const Board = ({ cats }) => {
 
     timeout.current = setTimeout(() => {
       setChosenCards([])
-    }, 500)
+    }, 1000)
   }
 
   const handleCardClick = (index) => {
-    if (chosenCards.length === 1) {
+    if (foundCards.includes(cats[index]._id)) return
+    if (chosenCards.length === 1 && chosenCards[0] !== index) {
       setChosenCards((prev) => [...prev, index])
       setTries((tries) => tries + 1)
     } else {
